@@ -28,7 +28,7 @@ Since failure part way through a running job could be costly (time/materials) Ch
 it does not appear to be possible to interrogate grbl to find out if it is currently in live or check mode, as the user is able to issue $C command manually it is necessary to keep track of the mode in bCNC.py
 
 
-SUMMARY OF CHANGES (extract from my_bCNC.odt):
+SUMMARY OF CHANGES (extract from my_bCNC_py.odt):
 
 Checker Tab added (def __init__ pg 5)
 
