@@ -9,7 +9,7 @@ bCNC_orig.py - a copy of the file bCNC.py as downloaded
 
 bCNC.py - the amended file (orig name kept to ensure it worked)
 
-my_bCNC.odt - an OpenOffice colour formatted documentation of my_bCNC.py with background highlighting to identify the changed/added code
+my_bCNC_py.odt - an OpenOffice colour formatted documentation of my_bCNC.py with background highlighting to identify the changed/added code
 
 
 The amendments were made to provide a quick fix for a gcode checker based on responses from grbl.  It is simplistic and can be vastly improved upon.
