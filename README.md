@@ -5,23 +5,23 @@ my_bCNC_dotPY is the result of making amendments to bCNC.py downloaded on 20 Jun
 
 The files contained here are:
 
-bCNC_orig.py - a copy of the file bCNC.py as downloaded
+bCNC_orig.py - a copy of the file bCNC.py as downloaded from https://github.com/vlachoudis/bCNC
 
 bCNC.py - the amended file (orig name kept to ensure it worked)
 
-my_bCNC_py.odt - an OpenOffice colour formatted documentation of my_bCNC.py with background highlighting to identify the changed/added code
+my_bCNC_py.odt - an OpenOffice colour formatted documentation of my amended bCNC.py with background highlighting to identify the changed/added code
 
 
 The amendments were made to provide a quick fix for a gcode checker based on responses from grbl.  It is simplistic and can be vastly improved upon.
 
-Note: if grbl issued multi-line responses to a gcode block it would corrupt method used by the checker.  Checker relies on a one to one relationship between sent gcode blocks and grbl responses.
+Note: if grbl issued multi-line responses to a gcode block it would corrupt the method used by Checker.  Checker relies on a one to one relationship between sent gcode blocks and grbl responses.
 
 
 POSSIBLE FUTURE DEVELOPMENT & OTHER THOUGHTS:
 
-gcode blocks causing 'error' can be difficult to spot, particularly in long gcode files.  As the vast majority of lines in a gcode file are likely to be 'ok', they could be skipped (when 'run()' is executed while in checkMode).  As long as the user has some way of finding the error causing gcode block in Editor to make corrections (eg using "Find" in the Editor?)
+gcode blocks causing 'error' can be difficult to spot, particularly in long gcode files.  As the vast majority of lines in a gcode file are likely to be 'ok', they could be skipped.  As long as the user has some way of finding the error causing gcode block in Editor to make corrections (eg using "Find" in the Editor?)
 
-The responses from grbl already available in Terminal are not immediately followed by the corresponding response due to the buffer within grbl.  A 'sent blocks buffer' within bCNC.py may be one way to hold onto sent blocks so that Terminal is only updated with paired sent/rec'd items once the corresponding 'ok'/'error' has been received (when 'run()' is executed while in checkMode but not necessarily liveMode?).
+The responses from grbl already available in Terminal do not immediately follow the corresponding gcode block due to the buffer within grbl.  A 'sent blocks buffer' within bCNC.py may be one way to hold onto sent blocks so that Terminal is only updated with paired sent/rec'd items once the corresponding 'ok'/'error' has been received.
 
 Since failure part way through a running job could be costly (time/materials) Checker should always be run (not just if user selects) and 'live run' should be enabled only when a 'no errors' check has been completed.
 
